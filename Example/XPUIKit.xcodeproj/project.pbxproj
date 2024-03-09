@@ -14,7 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		D88C3ADD9F2E8243CE5E84AD /* Pods_XPUIKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282D2DA1083C5BE8CF974270 /* Pods_XPUIKit_Example.framework */; };
-		E423AF36B9EA930EEE755CF1 /* Pods_XPUIKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0180D4C7C3377D198292875 /* Pods_XPUIKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A2274F6B86B0F935556814B /* Pods-XPUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Tests/Pods-XPUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		282D2DA1083C5BE8CF974270 /* Pods_XPUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XPUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CBE51D030EB77E8BDAF30EA /* Pods-XPUIKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Tests/Pods-XPUIKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		396061202F6598D37425D6AD /* Pods-XPUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XPUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +42,6 @@
 		771C74E7B0E431013342796F /* XPUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XPUIKit.podspec; path = ../XPUIKit.podspec; sourceTree = "<group>"; };
 		A57D90CFA8E2A8680ED275A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D69E73A94738D44DD0AE8BE3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E0180D4C7C3377D198292875 /* Pods_XPUIKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XPUIKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED85279B9241C59B31032849 /* Pods-XPUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E423AF36B9EA930EEE755CF1 /* Pods_XPUIKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				282D2DA1083C5BE8CF974270 /* Pods_XPUIKit_Example.framework */,
-				E0180D4C7C3377D198292875 /* Pods_XPUIKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,8 +147,6 @@
 			children = (
 				396061202F6598D37425D6AD /* Pods-XPUIKit_Example.debug.xcconfig */,
 				ED85279B9241C59B31032849 /* Pods-XPUIKit_Example.release.xcconfig */,
-				2CBE51D030EB77E8BDAF30EA /* Pods-XPUIKit_Tests.debug.xcconfig */,
-				0A2274F6B86B0F935556814B /* Pods-XPUIKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -186,7 +178,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "XPUIKit_Tests" */;
 			buildPhases = (
-				EDDCE45EFDCCABB6AFA42BE1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -300,28 +291,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDDCE45EFDCCABB6AFA42BE1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-XPUIKit_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -505,7 +474,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CBE51D030EB77E8BDAF30EA /* Pods-XPUIKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -527,7 +495,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A2274F6B86B0F935556814B /* Pods-XPUIKit_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
