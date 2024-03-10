@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		D88C3ADD9F2E8243CE5E84AD /* Pods_XPUIKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282D2DA1083C5BE8CF974270 /* Pods_XPUIKit_Example.framework */; };
+		FBCD473B2B9D945E00FD171A /* UIViewStyleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */; };
+		FBCD473C2B9D945E00FD171A /* XPDatePickVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +41,12 @@
 		607FACE51AFB9204008FA782 /* XPUIKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPUIKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		771C74E7B0E431013342796F /* XPUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XPUIKit.podspec; path = ../XPUIKit.podspec; sourceTree = "<group>"; };
-		A57D90CFA8E2A8680ED275A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D69E73A94738D44DD0AE8BE3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		771C74E7B0E431013342796F /* XPUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XPUIKit.podspec; path = ../XPUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A57D90CFA8E2A8680ED275A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D69E73A94738D44DD0AE8BE3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED85279B9241C59B31032849 /* Pods-XPUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewStyleVC.swift; sourceTree = "<group>"; };
+		FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPDatePickVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		607FACD21AFB9204008FA782 /* Example for XPUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FBCD47382B9D942200FD171A /* DemoVC */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -148,8 +153,16 @@
 				396061202F6598D37425D6AD /* Pods-XPUIKit_Example.debug.xcconfig */,
 				ED85279B9241C59B31032849 /* Pods-XPUIKit_Example.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBCD47382B9D942200FD171A /* DemoVC */ = {
+			isa = PBXGroup;
+			children = (
+				FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */,
+				FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */,
+			);
+			path = DemoVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +231,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -282,10 +296,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XPUIKit/XPUIKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XPUIKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +318,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FBCD473B2B9D945E00FD171A /* UIViewStyleVC.swift in Sources */,
+				FBCD473C2B9D945E00FD171A /* XPDatePickVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

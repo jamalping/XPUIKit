@@ -1,15 +1,22 @@
 PODS:
-  - XPUIKit (0.1.0)
+  - SnapKit (4.2.0)
+  - XPUIKit (0.0.1):
+    - SnapKit
 
 DEPENDENCIES:
   - XPUIKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SnapKit
 
 EXTERNAL SOURCES:
   XPUIKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XPUIKit: e6b777b198066505983e8d0d504fc41d99577122
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  XPUIKit: 212861c8c4a0b0400ace9dd5ac6df4c72e2e4815
 
 PODFILE CHECKSUM: 4682820f4df3c07fed89a3329acfe3e6bad52f69
 
