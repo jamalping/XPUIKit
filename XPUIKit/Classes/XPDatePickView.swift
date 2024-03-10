@@ -12,7 +12,6 @@ import SnapKit
 struct XPDatePickData {
     var component: Int
     var dataSource: [Date]?
-    
 }
 
 open class XPDatePickView: UIView {
