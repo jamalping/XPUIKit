@@ -26,5 +26,5 @@ class XPDatePickVC: UIViewController {
         self.datePick.currentDate = Date()
     }
     
-    lazy var datePick = XPDatePickView()
+    lazy var datePick = AADatePickView()
 }

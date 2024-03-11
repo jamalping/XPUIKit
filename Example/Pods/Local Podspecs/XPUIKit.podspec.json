@@ -1,6 +1,6 @@
 {
   "name": "XPUIKit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "XPUIKit.",
   "description": "this is XPUIKit",
   "homepage": "https://github.com/jamalping/XPUIKit",
@@ -15,7 +15,7 @@
   "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/jamalping/XPUIKit.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": "XPUIKit/Classes/**/*",
   "dependencies": {

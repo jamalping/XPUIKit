@@ -1,6 +1,6 @@
 PODS:
-  - SnapKit (4.2.0)
-  - XPUIKit (0.0.1):
+  - SnapKit (5.7.1)
+  - XPUIKit (0.0.2):
     - SnapKit
 
 DEPENDENCIES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  XPUIKit: 212861c8c4a0b0400ace9dd5ac6df4c72e2e4815
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  XPUIKit: 6fdf2785e78a7be7e5b8188a9e577ce2c5664cbe
 
-PODFILE CHECKSUM: 4682820f4df3c07fed89a3329acfe3e6bad52f69
+PODFILE CHECKSUM: e5d804a35e1e5b732f8d039d131776b3adbecde1
 
 COCOAPODS: 1.11.3
