@@ -182,7 +182,7 @@ public class AACustomPopoverVC: AABasePopoverVC<CustomBgView> {
     
     lazy var lineView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.separator
+        view.backgroundColor = UIColor.gray
         return view
     }()
 }
