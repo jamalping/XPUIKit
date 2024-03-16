@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   #   "XPUIKit" => ["XPUIKit/Assets/**/*"]
   # }
 
-  # s.resources  = "XPUIKit/**/*.{storyboard,xib}", "XPUIKit/Assets/*"
+   s.resources  = "XPUIKit/**/*.{storyboard,xib}", "XPUIKit/Assets/*"
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"

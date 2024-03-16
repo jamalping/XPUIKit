@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		D88C3ADD9F2E8243CE5E84AD /* Pods_XPUIKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282D2DA1083C5BE8CF974270 /* Pods_XPUIKit_Example.framework */; };
+		FBA745D12BA5AD0C00027E3A /* XPPopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA745D02BA5AD0C00027E3A /* XPPopoverVC.swift */; };
 		FBCD473B2B9D945E00FD171A /* UIViewStyleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */; };
 		FBCD473C2B9D945E00FD171A /* XPDatePickVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		A57D90CFA8E2A8680ED275A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D69E73A94738D44DD0AE8BE3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED85279B9241C59B31032849 /* Pods-XPUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-XPUIKit_Example/Pods-XPUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FBA745D02BA5AD0C00027E3A /* XPPopoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPPopoverVC.swift; sourceTree = "<group>"; };
 		FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewStyleVC.swift; sourceTree = "<group>"; };
 		FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XPDatePickVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 			children = (
 				FBCD47392B9D945E00FD171A /* UIViewStyleVC.swift */,
 				FBCD473A2B9D945E00FD171A /* XPDatePickVC.swift */,
+				FBA745D02BA5AD0C00027E3A /* XPPopoverVC.swift */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				FBCD473B2B9D945E00FD171A /* UIViewStyleVC.swift in Sources */,
+				FBA745D12BA5AD0C00027E3A /* XPPopoverVC.swift in Sources */,
 				FBCD473C2B9D945E00FD171A /* XPDatePickVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

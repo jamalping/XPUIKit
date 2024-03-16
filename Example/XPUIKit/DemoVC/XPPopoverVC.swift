@@ -1,24 +1,19 @@
 //
-//  ViewController.swift
-//  XPUIKit
+//  XPPopoverVC.swift
+//  XPUIKit_Example
 //
-//  Created by jamalping on 03/09/2024.
-//  Copyright (c) 2024 jamalping. All rights reserved.
+//  Created by jamalping on 2024/3/16.
+//  Copyright © 2024 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 import XPUIKit
 
-class ViewController: UIViewController {
-
-    enum TestType: String {
-        case UIViewStyle = "UIViewStyle"
-        case DatePickView = "datapick"
-        case PopoverView = "PopoverView"
-    }
-
-    let datasource: [TestType] = [.UIViewStyle, .DatePickView, .PopoverView]
+class XPPopoverVC: UIViewController {
+    
+    let datasource: [Int] = [1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,4,7,5,4]
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()
         tableView.delegate = self
@@ -39,7 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource,UITableViewDelegate {
+extension XPPopoverVC: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.datasource.count
     }
@@ -49,21 +44,22 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         if cell == nil {
             cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         }
-        cell!.textLabel?.text = self.datasource[indexPath.row].rawValue
+        cell!.textLabel?.text = "\(self.datasource[indexPath.row])"
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        switch self.datasource[indexPath.row] {
-        case .UIViewStyle:
-            self.navigationController?.pushViewController(UIViewStyleVC(), animated: true)
-        case .DatePickView:
-            self.navigationController?.pushViewController(XPDatePickVC(), animated: true)
-        case .PopoverView:
-            self.navigationController?.pushViewController(XPPopoverVC(), animated: true)
-        default: break
 
-        }
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        cell.contentView.backgroundColor = .red
+        
+        let vc = AACustomPopoverVC.init(sourceView: cell)
+        present(vc, animated: true, completion: nil)
+
     }
+    
+    
+        
+        
 }
+
