@@ -1,6 +1,0 @@
-framework module XPUIKit {
-  umbrella header "XPUIKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
