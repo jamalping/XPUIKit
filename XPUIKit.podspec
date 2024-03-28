@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XPUIKit"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "XPUIKit."
 
   s.description  = <<-DESC
