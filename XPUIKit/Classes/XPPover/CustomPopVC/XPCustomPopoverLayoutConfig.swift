@@ -1,5 +1,5 @@
 //
-//  AACustomPopoverLayoutConfig.swift
+//  XPCustomPopoverLayoutConfig.swift
 //  Pods
 //
 //  Created by jamalping on 2024/3/16.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol AACustomPopoverLayoutConfigProtocol {
+public protocol XPCustomPopoverLayoutConfigProtocol {
     var contentViewInsets: UIEdgeInsets { get set }
     
     var normalItemGap: CGFloat { get set }
@@ -23,7 +23,7 @@ public protocol AACustomPopoverLayoutConfigProtocol {
     var vHeight: CGFloat { get }
 }
 
-public struct AACustomPopoverDefaultLayout: AACustomPopoverLayoutConfigProtocol {
+public struct XPCustomPopoverDefaultLayout: XPCustomPopoverLayoutConfigProtocol {
     
     public var contentViewInsets: UIEdgeInsets = UIEdgeInsets.init(top: 16, left: 16, bottom: 16, right: 16)
     

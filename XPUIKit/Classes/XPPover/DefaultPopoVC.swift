@@ -47,7 +47,7 @@ open class DefaultPopoverBgView: BasePopoverBgView {
     }
 }
 
-open class DefaultPopoVC: AABasePopoverVC<DefaultPopoverBgView> {
+open class DefaultPopoVC: XPBasePopoverVC<DefaultPopoverBgView> {
     ///弹窗边框宽度
     public override var popBorderWidth: CGFloat{
         return PopDefaultConfig.shared.borderWidth

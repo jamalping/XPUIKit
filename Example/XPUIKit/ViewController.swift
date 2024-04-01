@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         case DatePickView = "datapick"
         case PopoverView = "PopoverView"
         case ScreenShieldView = "防截屏View"
+        case XPScrollView = "XPScrollView"
     }
 
-    let datasource: [TestType] = [.UIViewStyle, .DatePickView, .PopoverView, .ScreenShieldView]
+    let datasource: [TestType] = [.UIViewStyle, .DatePickView, .PopoverView, .ScreenShieldView, .XPScrollView]
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()
         tableView.delegate = self
@@ -65,6 +66,9 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             self.navigationController?.pushViewController(XPPopoverVC(), animated: true)
         case .ScreenShieldView:
             self.navigationController?.pushViewController(ScreenShieldViewDemoVC(), animated: true)
+        case .XPScrollView:
+            self.navigationController?.pushViewController(XPScrollViewDemoVC(), animated: true)
+            
         default: break
 
         }

@@ -1,5 +1,5 @@
 //
-//  AABasePopoverVC.swift
+//  XPBasePopoverVC.swift
 //  XPUIKit
 //
 //  Created by jamalping on 2024/3/16.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class AABasePopoverVC<T:UIPopoverBackgroundView>: UIViewController,UIPopoverPresentationControllerDelegate {
+open class XPBasePopoverVC<T:UIPopoverBackgroundView>: UIViewController,UIPopoverPresentationControllerDelegate {
     public var sourceView: UIView? = nil
     ///用于确定弹窗的位置
     public var sourceRect:CGRect = .zero

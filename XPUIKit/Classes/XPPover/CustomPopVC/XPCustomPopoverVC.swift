@@ -1,5 +1,5 @@
 //
-//  AACustomPopoverVC.swift
+//  XPCustomPopoverVC.swift
 //  XPUIKit
 //
 //  Created by jamalping on 2024/3/16.
@@ -79,9 +79,9 @@ public enum PopVerData {
     }
 }
 
-public class AACustomPopoverVC: AABasePopoverVC<CustomBgView> {
+public class XPCustomPopoverVC: XPBasePopoverVC<CustomBgView> {
     
-    public var popoverLayout: AACustomPopoverLayoutConfigProtocol!
+    public var popoverLayout: XPCustomPopoverLayoutConfigProtocol!
     
     private var _size: CGSize = CGSize.init(width: 200, height: 150)
     public override var size: CGSize {
@@ -105,12 +105,12 @@ public class AACustomPopoverVC: AABasePopoverVC<CustomBgView> {
     
     public var dataSource: [PopVerData] = [.normal(PopVerData.Pdata()),.normal(PopVerData.Pdata()),.normal(PopVerData.Pdata()),.caution(PopVerData.Pdata.init(image: "", title: "asdghjkdfsdfghgdsfghsdsdffghhlgsdfkh"))] {
         didSet {
-            self.popoverLayout = AACustomPopoverDefaultLayout.init(dataSource: self.dataSource)
+            self.popoverLayout = XPCustomPopoverDefaultLayout.init(dataSource: self.dataSource)
         }
     }
     
     public init(sourceView: UIView) {
-        popoverLayout = AACustomPopoverDefaultLayout.init(dataSource: self.dataSource)
+        popoverLayout = XPCustomPopoverDefaultLayout.init(dataSource: self.dataSource)
         _size = CGSize.init(width: popoverLayout!.vWidth, height: popoverLayout!.vHeight)
         super.init(size: _size)
         
@@ -242,8 +242,8 @@ public class ItemView: UIView {
         titleLabel.font = UIFont.systemFont(ofSize: 15)
         titleLabel.textColor = UIColor.gray
 //        titleLabel.fontSize = MixFont(normal: popConfig.normalTextFont, other: popConfig.largeTextFont)
-//        titleLabel.aaTextColor = themeColor{ ColorManager.font2_sub }
-//        titleLabel.aaBackgroundColor = themeColor{ ColorManager.bg_3a }
+//        titleLabel.XPTextColor = themeColor{ ColorManager.font2_sub }
+//        titleLabel.XPBackgroundColor = themeColor{ ColorManager.bg_3a }
         return titleLabel
     }()
     
@@ -251,7 +251,7 @@ public class ItemView: UIView {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
 //        if let image = UIImage(nameInBundle: "iconImPrompt") {
-//            imageView.aaImageColor = themeImageColor{
+//            imageView.XPImageColor = themeImageColor{
 //                return (normalImage: image, normalColors: [ColorManager.primary_colour1,ColorManager.primary_colour2], selectImage: nil, selectColors: nil, direction: .bottom)
 //            }
 //        }

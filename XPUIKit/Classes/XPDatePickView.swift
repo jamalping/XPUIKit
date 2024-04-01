@@ -1,5 +1,5 @@
 //
-//  AADatePickView.swift
+//  XPDatePickView.swift
 //  XPUIKit
 //
 //  Created by jamalping on 2024/3/9.
@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 import SnapKit
 
-public struct AADatePickData {
+public struct XPDatePickData {
     var component: Int
     var dataSource: [Date]?
 }
 
-open class AADatePickView: UIView {
+open class XPDatePickView: UIView {
     
     public let calendar = Calendar.current
     
@@ -40,7 +40,7 @@ open class AADatePickView: UIView {
     
     public var selectedDate: Date = Date()
     
-    var dataSource: [AADatePickData] = [AADatePickData]() {
+    var dataSource: [XPDatePickData] = [XPDatePickData]() {
         didSet {
             self.pickView.reloadAllComponents()
         }
@@ -70,7 +70,7 @@ open class AADatePickView: UIView {
     }
 }
 
-extension AADatePickView: UIPickerViewDelegate, UIPickerViewDataSource {
+extension XPDatePickView: UIPickerViewDelegate, UIPickerViewDataSource {
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         self.dataSource.count
     }
@@ -155,7 +155,7 @@ extension AADatePickView: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-extension AADatePickView {
+extension XPDatePickView {
     
     func setDefaultDataSource(date: Date) {
         self.currentDate = date
@@ -222,32 +222,32 @@ extension AADatePickView {
 //
     }
     
-    func generateDateSource(date: Date, count: Int = 31) -> [AADatePickData] {
-        var AADatePickDatas = [AADatePickData]()
+    func generateDateSource(date: Date, count: Int = 31) -> [XPDatePickData] {
+        var XPDatePickDatas = [XPDatePickData]()
         
-        AADatePickDatas.append(self.generateDate(date: date))
+        XPDatePickDatas.append(self.generateDate(date: date))
         if let hourDatePickData = self.generateHour(date: date) {
-            AADatePickDatas.append(hourDatePickData)
+            XPDatePickDatas.append(hourDatePickData)
         }
         if let minuteDatePickData = self.generateMinute(date: date) {
-            AADatePickDatas.append(minuteDatePickData)
+            XPDatePickDatas.append(minuteDatePickData)
         }
         
-        return AADatePickDatas
+        return XPDatePickDatas
     }
     
     /// 组装date
-    func generateDate(date: Date, count: Int = 31) -> AADatePickData {
+    func generateDate(date: Date, count: Int = 31) -> XPDatePickData {
         var dates = [Date]()
         for i in 0 ... count {
             if let rDate = calendar.date(byAdding: .day, value: i, to: date) {
                 dates.append(rDate)
             }
         }
-        return AADatePickData.init(component: 1, dataSource: dates)
+        return XPDatePickData.init(component: 1, dataSource: dates)
     }
     /// hour
-    func generateHour(date: Date, count: Int = 24) -> AADatePickData? {
+    func generateHour(date: Date, count: Int = 24) -> XPDatePickData? {
         var dates = [Date]()
         var components = calendar.dateComponents([.year, .month, .day], from: date)
         components.hour = 0
@@ -260,10 +260,10 @@ extension AADatePickView {
             }
         }
         
-        return AADatePickData.init(component: 2, dataSource: dates.sorted())
+        return XPDatePickData.init(component: 2, dataSource: dates.sorted())
     }
     /// minute
-    func generateMinute(date: Date, count: Int = 60) -> AADatePickData? {
+    func generateMinute(date: Date, count: Int = 60) -> XPDatePickData? {
         var dates = [Date]()
         var components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
         components.minute = 0
@@ -274,6 +274,6 @@ extension AADatePickView {
                 dates.append(rDate)
             }
         }
-        return AADatePickData.init(component: 3, dataSource: dates)
+        return XPDatePickData.init(component: 3, dataSource: dates)
     }
 }
