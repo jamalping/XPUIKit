@@ -32,7 +32,7 @@ class ScreenShieldViewDemoVC: UIViewController {
         
     }
     
-    public lazy var screenShieldView = {
+    public lazy var screenShieldView: ScreenShieldView = {
         let view = ScreenShieldView.create()
         view.isEnable = true
         return view
